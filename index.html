@@ -1,189 +1,129 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>星海國際貿易有限公司｜Ocean Star International Trading Ltd.</title>
+    <title>星海國際貿易有限公司 | Ocean Star international Trading Ltd.</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Microsoft JhengHei", sans-serif;
+            font-family: Arial, sans-serif;
         }
         body {
-            background-color: #f8fafc;
-            color: #1e293b;
-            line-height: 1.7;
+            line-height: 1.6;
+            color: #333;
         }
         header {
-            background: white;
-            padding: 2rem 5%;
+            background-color: #1f3b57;
+            color: white;
+            padding: 2rem;
             text-align: center;
-            border-bottom: 3px solid #0f172a;
         }
-        header img {
-            max-width: 420px;
-            width: 100%;
-            height: auto;
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
         }
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 3rem 5%;
+            padding: 2rem;
         }
-        .section {
-            margin-bottom: 3.5rem;
+        section {
+            margin-bottom: 3rem;
         }
-        .section h2 {
-            font-size: 1.6rem;
+        h2 {
+            color: #1f3b57;
             margin-bottom: 1rem;
-            color: #0f172a;
-            border-left: 5px solid #2563eb;
-            padding-left: 1rem;
+            border-bottom: 2px solid #3474b3;
+            padding-bottom: 0.3rem;
         }
-        .section h2 .en {
-            display: block;
-            font-size: 1rem;
-            color: #64748b;
-            font-weight: normal;
-            margin-top: 0.2rem;
+        ul {
+            padding-left: 1.5rem;
+            margin-top: 0.8rem;
         }
-        .cards {
+        li {
+            margin: 0.6rem 0;
+        }
+        .two-col {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
+        @media(max-width:768px){
+            .two-col{
+                grid-template-columns: 1fr;
+            }
+        }
         .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-        }
-        .card h3 {
-            margin-bottom: 0.6rem;
-            color: #2563eb;
-        }
-        .card h3 .en {
-            display: block;
-            font-size: 0.9rem;
-            color: #64748b;
-            font-weight: normal;
-        }
-        .card ul {
-            padding-left: 1.3rem;
-        }
-        .card li {
-            margin-bottom: 0.4rem;
-        }
-        .card li .en {
-            display: block;
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-        .steps {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-        }
-        .steps ol {
-            padding-left: 1.5rem;
-        }
-        .steps li {
-            margin-bottom: 0.6rem;
-        }
-        .steps li .en {
-            display: block;
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-        .contact-box {
-            background: #0f172a;
-            color: white;
-            padding: 2.5rem;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .contact-box h2 {
-            color: white;
-            border-left: none;
-            padding-left: 0;
-        }
-        .contact-box p {
-            margin: 0.4rem 0;
+            background: #f7f9fc;
+            padding:1.5rem;
+            border-radius:8px;
         }
         footer {
-            text-align: center;
-            padding: 2rem;
-            background: #0f172a;
-            color: #cbd5e1;
-            font-size: 0.9rem;
+            background:#1f3b57;
+            color:white;
+            text-align:center;
+            padding:2rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.jpg" alt="星海國際貿易有限公司 Ocean Star International Trading Ltd.">
+        <h1>星海國際貿易有限公司<br>Ocean Star international Trading Ltd.</h1>
+        <p>小批量試單採購｜跨境供應鏈測試服務<br>Small Trial Order Sourcing & Cross-border Supply Chain Testing</p>
     </header>
 
     <div class="container">
-        <section class="section">
-            <h2>關於我們<span class="en">About Us</span></h2>
-            <p>星海國際貿易專營跨境貿易業務，涵蓋實物貨品進出口，以及純線上數字產品跨境服務。我們協助客戶打通全球市場，提供貿易諮詢、貨源對接、跨境運輸、商務溝通等一站式服務。</p>
-            <p style="color:#64748b; margin-top:0.5rem;">Ocean Star International Trading specializes in cross-border trade, covering physical goods import/export and online digital product services. We help clients access global markets with one-stop services including trade consulting, supplier sourcing, cross-border logistics, and business communication.</p>
+        <section>
+            <h2>關於我們 | About Us</h2>
+            <p>我們係一間微小企業，嘗試透過小單模式，完整跑一次外貿流程。歡迎海外小買家一同試行，由上游供應商、貨代到各項收費，一起學習實戰經驗。唔需要大訂單，專注產品測試。</p>
+            <p><br>We are a micro-enterprise exploring international trade through small trial orders. We welcome overseas small buyers to test the full supply chain together, from suppliers and freight forwarders to all related costs. No bulk orders required, focused on product market testing.</p>
         </section>
 
-        <section class="section">
-            <h2>我們的服務<span class="en">Our Services</span></h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>實物貨品國際貿易<span class="en">Physical Goods Trading</span></h3>
-                    <ul>
-                        <li>各類實體商品跨境進出口<span class="en">Cross-border import & export of physical goods</span></li>
-                        <li>貨源尋找與供應商對接<span class="en">Product sourcing & supplier matching</span></li>
-                        <li>跨境物流、清關協調<span class="en">Cross-border logistics & customs clearance</span></li>
-                        <li>海外市場銷售渠道拓展<span class="en">Overseas market & sales channel expansion</span></li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>線上數字產品服務<span class="en">Online Digital Products</span></h3>
-                    <ul>
-                        <li>數位產品跨境銷售與交付<span class="en">Cross-border sales & delivery of digital products</span></li>
-                        <li>數位內容商務合作<span class="en">Digital content business partnerships</span></li>
-                        <li>跨境數位業務諮詢<span class="en">Cross-border digital business consulting</span></li>
-                        <li>線上商務方案規劃<span class="en">Online business solution planning</span></li>
-                    </ul>
-                </div>
+        <section class="two-col">
+            <div class="card">
+                <h2>服務內容 | Services</h2>
+                <ul>
+                    <li>✅ 小批量試單採購（適合市場測試）<br>Small-batch trial sourcing for market testing</li>
+                    <li>✅ 貨代同物流諮詢，拆解各項收費<br>Freight & logistics consultation, cost breakdown</li>
+                    <li>✅ 實物商品 + 數位產品服務<br>Physical goods & digital products sourcing</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>產品類別 | Product Range</h2>
+                <ul>
+                    <li>• 聖書 Religious books (Bibles)</li>
+                    <li>• STEM兒童益智玩具 STEM toys for kids</li>
+                    <li>• 充電線及電子配件 Charging cables & electronic accessories</li>
+                    <li>• 運動用品 Sports goods（適合新西蘭IG / Facebook小單）</li>
+                </ul>
             </div>
         </section>
 
-        <section class="section">
-            <h2>服務流程<span class="en">How We Work</span></h2>
-            <div class="steps">
-                <ol>
-                    <li>客戶需求溝通，確認貿易項目<span class="en">Consultation & requirement confirmation</span></li>
-                    <li>方案評估、成本與風險分析<span class="en">Proposal, cost & risk analysis</span></li>
-                    <li>貨源／數位產品對接、商務洽談<span class="en">Sourcing & business negotiation</span></li>
-                    <li>執行跨境交易、物流或數位交付<span class="en">Execution: cross-border transaction & delivery</span></li>
-                    <li>售後跟進與後續合作維護<span class="en">After-sales follow-up & ongoing partnership</span></li>
-                </ol>
-            </div>
+        <section>
+            <h2>我們的優勢 | Why Choose Us</h2>
+            <ul>
+                <li>✅ 新手友好：陪你完整走一次外貿流程，獲得實戰經驗<br>Beginner friendly: Walk through the whole trade cycle for hands-on experience</li>
+                <li>✅ 接受少量訂單，主打樣品、測試單<br>Low MOQ, sample & trial orders only</li>
+                <li>✅ 針對新西蘭社交平台小單零售需求<br>Support small social commerce orders for New Zealand market</li>
+            </ul>
         </section>
 
-        <section class="section">
-            <div class="contact-box">
-                <h2>聯絡我們｜Contact Us</h2>
-                <p>📞 電話 Phone：(你的電話號碼)</p>
-                <p>💬 WhatsApp：(你的WhatsApp號碼)</p>
-                <p>📧 Email：(你的郵箱)</p>
-                <p>📍 地址 Address：澳門 Macau</p>
-            </div>
+        <section>
+            <h2>聯絡我們 | Contact</h2>
+            <p>如你想查詢產品試單、報價同物流資訊，歡迎聯絡。聯絡資訊後續更新。</p>
+            <p><br>If you want to inquire about trial orders, quotations and shipping details, please contact us. Contact details to be updated later.</p>
         </section>
     </div>
 
     <footer>
-        © 2026 星海國際貿易有限公司｜Ocean Star International Trading Ltd.
+        <p>© 2026 星海國際貿易有限公司 Ocean Star international Trading Ltd.</p>
     </footer>
 </body>
 </html>
