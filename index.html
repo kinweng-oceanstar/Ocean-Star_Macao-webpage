@@ -66,6 +66,28 @@
             border-radius: 8px;
             margin-bottom: 1.5rem;
         }
+        table {
+            width:100%;
+            border-collapse: collapse;
+            margin:1rem 0;
+        }
+        table th, table td {
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:left;
+        }
+        table thead tr {
+            background:#f4f4f4;
+        }
+        table tbody tr:nth-child(even){
+            background:#fafafa;
+        }
+        .note-box{
+            background:#f8f9fa;
+            padding:24px;
+            border-radius:10px;
+            margin-top:2rem;
+        }
         footer {
             background: #1f3b57;
             color: white;
@@ -79,14 +101,12 @@
         <h1>星海國際貿易有限公司<br>Ocean Star international Trading Ltd.</h1>
         <p>小批量試單採購（3件起訂）｜跨境供應鏈測試與多元服務<br>Small Trial Order Sourcing (Min. 3 pcs) & Cross-border Supply Chain Testing</p>
     </header>
-
     <div class="container">
         <section>
             <h2>關於我們 | About Us</h2>
             <p>我們係一間微小企業，嘗試透過小單模式（<strong>3件起訂</strong>），完整跑一次外貿與跨境流程。我們採取「單品平台試行」策略，由上游供應商、貨代物流到合規監管，一起學習實戰經驗。專注產品與市場測試，拒絕大額壓貨風險。</p>
             <p><br>We are a micro-enterprise exploring international trade through small trial orders (<strong>minimum 3 pieces</strong>). We implement a single-product platform trial strategy to test suppliers, logistics, and compliance, helping buyers gain hands-on market experience without large-scale inventory pressure.</p>
         </section>
-
         <section class="two-col">
             <div>
                 <div class="card">
@@ -105,7 +125,6 @@
                     </ul>
                 </div>
             </div>
-
             <div>
                 <div class="card">
                     <h2>產品與服務類別 | Product Range</h2>
@@ -121,13 +140,77 @@
             </div>
         </section>
 
+        <!-- 新增：收費標準區塊 -->
+        <section>
+            <h2>業界常見收費標準 | Standard Service Fee Structure</h2>
+            <div class="card">
+                <h3>1. 採購代辦費（最常用）<span style="color:#555; font-weight:normal;">Sourcing Service Fee</span></h3>
+                <p>作為買家同供應商之間嘅採購協調代理人：</p>
+                <ul>
+                    <li>標準收費：訂單總額 <strong>5%–10%</strong></li>
+                    <li>小額訂單（USD 1,000–5,000）：<strong>7%–10%</strong>（金額細，比例較高彌補行政成本）</li>
+                    <li>中/大額訂單（USD 5,000–20,000+）：<strong>3%–5%</strong></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>2. 固定服務代辦費 <span style="color:#555; font-weight:normal;">Flat Service Fee</span></h3>
+                <p>如果唔想按百分比計算，可按每批貨收固定費，覆蓋溝通、文書、物流協調時間成本</p>
+                <ul>
+                    <li>小單 / 樣品運輸：<strong>USD 50–150</strong></li>
+                    <li>中型訂單：<strong>USD 200–500</strong></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>3. 物流協調加成 <span style="color:#555; font-weight:normal;">Logistics Mark-up</span></h3>
+                <p>負責安排貨代同物流：標準加成，喺原始貨運報價之上加收 <strong>10%–15%</strong></p>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>交易類型</th>
+                        <th>常見訂單規模</th>
+                        <th>常見服務費</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>小額採購代購</td>
+                        <td>USD 2,000 以下</td>
+                        <td>8% – 10%（或 USD50–150 固定費）</td>
+                    </tr>
+                    <tr>
+                        <td>中額採購代辦</td>
+                        <td>USD 2,000 – 10,000</td>
+                        <td>5% – 7%</td>
+                    </tr>
+                    <tr>
+                        <td>大額訂單採購</td>
+                        <td>USD 10,000 以上</td>
+                        <td>3% – 5%</td>
+                    </tr>
+                    <tr>
+                        <td>物流協調加成</td>
+                        <td>按實際報價</td>
+                        <td>貨運報價基礎上加收10%–15%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="note-box">
+                <h3>服務說明 Service Statement</h3>
+                <p><strong>中文</strong><br>我們提供中國、越南等海外供應商直接採購及一站式物流管理服務。收費結構清晰透明：按訂單總額收取 5% 至 8% 採購及協調服務費，另加實際運費。</p>
+                <p><strong>English</strong><br>We provide direct sourcing and one-stop logistics management from suppliers in China, Vietnam and other regions. Our fee structure is transparent: a 5%–8% sourcing & coordination service fee based on total order value, plus actual shipping cost.</p>
+            </div>
+        </section>
+        <!-- 收費區完結 -->
+
         <section>
             <h2>聯絡我們 | Contact</h2>
             <p>如你想查詢 3 件起訂試單、合規協助或物流報價，歡迎聯絡。聯絡資訊後續更新。</p>
             <p><br>If you want to inquire about trial orders (min. 3 pcs), compliance support, or shipping details, please contact us. Contact details to be updated later.</p>
         </section>
     </div>
-
     <footer>
         <p>© 2026 星海國際貿易有限公司 Ocean Star international Trading Ltd.</p>
     </footer>
