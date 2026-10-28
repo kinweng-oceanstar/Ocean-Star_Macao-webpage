@@ -1,218 +1,758 @@
+
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>星海國際貿易有限公司 | Ocean Star international Trading Ltd.</title>
+    <meta name="description" content="星海國際貿易有限公司提供採購需求分析、供應商搜尋、報價比較及跨境採購協調服務。">
+    <title>星海國際貿易有限公司 | Ocean Star International Trading Ltd.</title>
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: Arial, "Microsoft JhengHei", sans-serif;
         }
+
         body {
-            line-height: 1.6;
+            line-height: 1.7;
             color: #333;
+            background: #fff;
         }
+
         header {
             background-color: #1f3b57;
             color: white;
             padding: 2rem;
             text-align: center;
         }
-        header img.logo{
-            max-height:160px;
-            margin-bottom:1rem;
+
+        header img.logo {
+            max-height: 160px;
+            max-width: 100%;
+            object-fit: contain;
+            margin-bottom: 1rem;
         }
+
         header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
+            font-size: 1.05rem;
+            opacity: 0.95;
         }
+
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 2rem;
         }
+
         section {
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
+            scroll-margin-top: 20px;
         }
+
         h2 {
             color: #1f3b57;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             border-bottom: 2px solid #3474b3;
-            padding-bottom: 0.3rem;
+            padding-bottom: 0.4rem;
+            font-size: 1.65rem;
         }
+
+        h3 {
+            color: #1f3b57;
+            margin-bottom: 0.7rem;
+        }
+
+        p {
+            margin-bottom: 0.8rem;
+        }
+
         ul {
             padding-left: 1.5rem;
             margin-top: 0.8rem;
         }
+
         li {
             margin: 0.6rem 0;
         }
+
         .two-col {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
-        @media(max-width:768px){
-            .two-col{
-                grid-template-columns: 1fr;
-            }
-        }
+
         .card {
             background: #f7f9fc;
             padding: 1.5rem;
             border-radius: 8px;
             margin-bottom: 1.5rem;
+            border: 1px solid #e6ebf1;
         }
+
+        .card p:last-child,
+        .card ul:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Our Sourcing Process */
+        .process-intro {
+            max-width: 850px;
+            margin-bottom: 1.5rem;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .process-card {
+            position: relative;
+            background: #f7f9fc;
+            border: 1px solid #e1e8f0;
+            border-radius: 10px;
+            padding: 1.5rem;
+        }
+
+        .process-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #1f3b57;
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+        }
+
+        .process-card h3 {
+            font-size: 1.12rem;
+        }
+
+        .process-card .english-title {
+            display: block;
+            color: #3474b3;
+            font-size: 0.95rem;
+            font-weight: normal;
+            margin-top: 0.1rem;
+        }
+
+        .process-card p {
+            margin-top: 0.6rem;
+        }
+
+        .process-card ul {
+            margin-top: 0.5rem;
+        }
+
+        .benefit {
+            margin-top: 1rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid #dce4ed;
+            font-size: 0.95rem;
+        }
+
+        .benefit strong {
+            color: #1f3b57;
+        }
+
+        .process-note {
+            background: #eef4fa;
+            border-left: 4px solid #3474b3;
+            padding: 1.2rem 1.4rem;
+            border-radius: 5px;
+            margin-top: 1.5rem;
+        }
+
+        .service-points {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .service-point {
+            padding: 1rem;
+            background: #fff;
+            border: 1px solid #e1e8f0;
+            border-radius: 8px;
+        }
+
+        .service-point h3 {
+            font-size: 1rem;
+        }
+
         table {
-            width:100%;
+            width: 100%;
             border-collapse: collapse;
-            margin:1rem 0;
+            margin: 1rem 0;
         }
-        table th, table td {
-            border:1px solid #ddd;
-            padding:12px;
-            text-align:left;
+
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
         }
+
         table thead tr {
-            background:#f4f4f4;
+            background: #f4f4f4;
         }
-        table tbody tr:nth-child(even){
-            background:#fafafa;
+
+        table tbody tr:nth-child(even) {
+            background: #fafafa;
         }
-        .note-box{
-            background:#f8f9fa;
-            padding:24px;
-            border-radius:10px;
-            margin-top:2rem;
+
+        .note-box {
+            background: #f8f9fa;
+            padding: 24px;
+            border-radius: 10px;
+            margin-top: 2rem;
+            border: 1px solid #e6ebf1;
         }
+
+        .contact-box {
+            background: #eef4fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            border-bottom: none;
+        }
+
+        .contact-list {
+            display: inline-block;
+            text-align: left;
+            margin: 0.5rem auto 1rem;
+        }
+
+        .contact-button {
+            display: inline-block;
+            margin-top: 0.8rem;
+            padding: 0.8rem 1.5rem;
+            background: #1f3b57;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .contact-button:hover {
+            background: #3474b3;
+        }
+
+        .small-print {
+            font-size: 0.9rem;
+            color: #5b6570;
+        }
+
         footer {
             background: #1f3b57;
             color: white;
             text-align: center;
             padding: 2rem;
         }
+
+        footer p {
+            margin-bottom: 0.3rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.2rem;
+            }
+
+            header {
+                padding: 1.5rem 1rem;
+            }
+
+            header p {
+                font-size: 0.95rem;
+            }
+
+            .two-col,
+            .process-grid,
+            .service-points {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .card,
+            .process-card {
+                padding: 1.2rem;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            table th,
+            table td {
+                padding: 8px;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <header>
-        <!-- Logo（圖片內已經包含公司名，所以移除h1，避免重疊） -->
-        <img class="logo" src="logo.png" alt="星海國際 Ocean Star">
-        <p>小批量試單採購（3件起訂）｜跨境供應鏈測試與多元服務<br>Small Trial Order Sourcing (Min. 3 pcs) & Cross-border Supply Chain Testing</p>
-    </header>
-    <div class="container">
-        <section>
-            <h2>關於我們 | About Us</h2>
-            <p>我們係一間微小企業，嘗試透過小單模式（<strong>3件起訂</strong>），完整跑一次外貿與跨境流程。我們採取「單品平台試行」策略，由上游供應商、貨代物流到合規監管，一起學習實戰經驗。專注產品與市場測試，拒絕大額壓貨風險。</p>
-            <p><br>We are a micro-enterprise exploring international trade through small trial orders (<strong>minimum 3 pieces</strong>). We implement a single-product platform trial strategy to test suppliers, logistics, and compliance, helping buyers gain hands-on market experience without large-scale inventory pressure.</p>
-        </section>
-        <section class="two-col">
-            <div>
-                <div class="card">
-                    <h2>服務策略與流程 | Service Strategy</h2>
-                    <ul>
-                        <li>✅ <strong>單品平台試行</strong>：先選擇單一產品在特定平台進行小规模試運作。<br>Single-product platform trial strategy.</li>
-                        <li>✅ <strong>3件起訂彈性試單</strong>：評估價格、產品质量與供應商配合度。<br>Low MOQ from 3 pcs for quality & cost testing.</li>
-                        <li>✅ <strong>物流與貨代評估</strong>：透明拆解各項運輸與小額費用細項。<br>Transparent logistics and cost breakdown.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h2>跨國合規與支援 | Compliance & Support</h2>
-                    <ul>
-                        <li>✅ <strong>跨國交易合規協助</strong>：配合相關法規與安全交易環境指引。<br>Cross-border trade compliance & secure guidance.</li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <div class="card">
-                    <h2>產品與服務類別 | Product Range</h2>
-                    <ul>
-                        <li> <strong>聖書</strong> (Religious books / Bibles)</li>
-                        <li> <strong>STEM兒童益智玩具</strong> (STEM toys for kids)</li>
-                        <li> <strong>充電線及電子配件</strong> (Cables & electronic accessories)</li>
-                        <li> <strong>運動用品</strong>（適合新西蘭社交平台小單）<br>Sports goods for NZ social commerce</li>
-                        <li> <strong>健康與輔具產品</strong>（防跌工具、助聽器、糖尿病檢測設備）<br>Health & assistive devices (fall prevention, hearing aids, diabetes care)</li>
-                        <li> <strong>個人化陪伴服務</strong>（如陪伴就醫輔導等）<br>Personal companion services (e.g., hospital visit assistance)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
-        <!-- 新增：收費標準區塊 -->
-        <section>
-            <h2>業界常見收費標準 | Standard Service Fee Structure</h2>
+<header>
+    <img class="logo" src="logo.png" alt="星海國際貿易有限公司 Ocean Star">
+    <p>
+        小批量試單採購｜跨境供應鏈協調與產品市場測試<br>
+        Small-Order Sourcing | Cross-Border Sourcing Coordination
+    </p>
+</header>
+
+<main class="container">
+
+    <!-- About Us -->
+    <section id="about">
+        <h2>關於我們 | About Us</h2>
+
+        <p>
+            星海國際貿易有限公司致力於協助客戶探索採購機會、尋找潛在供應商、
+            比較報價及協調跨境採購流程。我們重視清晰溝通、務實評估及靈活的合作方式。
+        </p>
+
+        <p>
+            我們鼓勵客戶在正式下大額訂單前，先了解產品規格、供應商條件及物流成本。
+            小批量採購或樣品測試能否安排，須視乎產品、供應商及目的地要求而定。
+        </p>
+
+        <p>
+            Ocean Star International Trading Ltd. helps customers explore sourcing
+            opportunities, identify potential suppliers, compare quotations and
+            coordinate cross-border purchasing activities.
+        </p>
+
+        <p>
+            We value clear communication, practical evaluation and flexible cooperation.
+            Where available, small trial orders or samples can help customers assess
+            product suitability and sourcing conditions before placing larger orders.
+        </p>
+    </section>
+
+    <!-- Existing Services -->
+    <section class="two-col" id="services">
+
+        <div>
             <div class="card">
-                <h3>1. 採購代辦費（最常用）<span style="color:#555; font-weight:normal;">Sourcing Service Fee</span></h3>
-                <p>作為買家同供應商之間嘅採購協調代理人：</p>
+                <h2>服務策略 | Service Strategy</h2>
                 <ul>
-                    <li>標準收費：訂單總額 <strong>5%–10%</strong></li>
-                    <li>小額訂單（USD 1,000–5,000）：<strong>7%–10%</strong>（金額細，比例較高彌補行政成本）</li>
-                    <li>中/大額訂單（USD 5,000–20,000+）：<strong>3%–5%</strong></li>
+                    <li>
+                        <strong>產品與市場測試</strong><br>
+                        按客戶需求探索合適產品及小批量試單機會。<br>
+                        Product and market testing based on customer requirements.
+                    </li>
+                    <li>
+                        <strong>供應商搜尋與報價比較</strong><br>
+                        協助整理潛在供應商資料及可取得的報價。<br>
+                        Potential supplier research and quotation comparison.
+                    </li>
+                    <li>
+                        <strong>物流協調</strong><br>
+                        按項目需要協助聯絡貨代及了解運輸成本。<br>
+                        Freight forwarder coordination and shipping cost enquiries.
+                    </li>
                 </ul>
             </div>
+
             <div class="card">
-                <h3>2. 固定服務代辦費 <span style="color:#555; font-weight:normal;">Flat Service Fee</span></h3>
-                <p>如果唔想按百分比計算，可按每批貨收固定費，覆蓋溝通、文書、物流協調時間成本</p>
+                <h2>跨境支援 | Cross-Border Support</h2>
                 <ul>
-                    <li>小單 / 樣品運輸：<strong>USD 50–150</strong></li>
-                    <li>中型訂單：<strong>USD 200–500</strong></li>
+                    <li>
+                        <strong>文件與要求確認</strong><br>
+                        協助整理採購及運輸所需資料，並提示需要向供應商、
+                        貨代或專業機構進一步確認的事項。<br>
+                        Assistance with sourcing documents and identifying matters
+                        that require further confirmation.
+                    </li>
+                </ul>
+                <p class="small-print">
+                    實際服務範圍視乎項目要求及雙方協議而定。
+                    法律、認證、檢驗及清關等專業服務須由適當的服務提供者處理。
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <div class="card">
+                <h2>產品與服務類別 | Product Range</h2>
+                <ul>
+                    <li><strong>宗教書籍</strong> (Religious Books)</li>
+                    <li><strong>STEM 兒童益智玩具</strong> (STEM Toys)</li>
+                    <li><strong>充電線及電子配件</strong> (Cables and Electronic Accessories)</li>
+                    <li><strong>運動用品</strong> (Sports Goods)</li>
+                    <li>
+                        <strong>健康及輔助生活用品</strong><br>
+                        (Health and Daily Living Aids)
+                    </li>
+                </ul>
+                <p class="small-print">
+                    以上為探索中的產品類別，並不代表所有產品已備有現貨或可供應。
+                    受規管的醫療器材及相關產品，須先確認適用的法規、認證及進出口要求。
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- NEW: Our Sourcing Process -->
+    <section id="sourcing-process">
+
+        <h2>我們的採購配對流程 | Our Sourcing Process</h2>
+
+        <div class="process-intro">
+            <p>
+                我們明白，尋找合適供應商需要時間、資料整理及仔細比較。
+                星海會按你的採購需求，協助研究潛在供應商、收集可取得的產品資料，
+                並在雙方同意的服務範圍內協調採購事項。
+            </p>
+
+            <p>
+                Our process is designed to make sourcing clearer and more organised.
+                We help you explore potential suppliers, compare available information
+                and coordinate next steps based on your requirements.
+            </p>
+        </div>
+
+        <div class="process-grid">
+
+            <!-- Step 1 -->
+            <article class="process-card">
+                <div class="process-number">01</div>
+                <h3>
+                    了解你的採購需求
+                    <span class="english-title">Understand Your Requirements</span>
+                </h3>
+
+                <p>我們首先了解你想採購甚麼，以及你的預算和交付要求。</p>
+
+                <ul>
+                    <li>產品名稱、規格或參考圖片</li>
+                    <li>預計採購數量及目標預算</li>
+                    <li>送貨目的地及期望時間</li>
+                    <li>包裝、認證或其他特別要求</li>
+                </ul>
+
+                <p>
+                    We first learn about your product, quantity, budget,
+                    destination and timeline.
+                </p>
+
+                <div class="benefit">
+                    <strong>你的好處 | Your Benefit</strong><br>
+                    在開始搜尋前，先清楚界定採購目標。
+                </div>
+            </article>
+
+            <!-- Step 2 -->
+            <article class="process-card">
+                <div class="process-number">02</div>
+                <h3>
+                    搜尋潛在供應商
+                    <span class="english-title">Research Potential Suppliers</span>
+                </h3>
+
+                <p>根據你的要求，研究可能符合條件的供應商及產品選項。</p>
+
+                <ul>
+                    <li>產品是否符合基本要求</li>
+                    <li>供應商可提供的產品資料</li>
+                    <li>最低訂購量及初步價格資訊</li>
+                    <li>供應商回覆及可取得的交易條件</li>
+                </ul>
+
+                <p>
+                    We research potential suppliers and review the available
+                    product and commercial information.
+                </p>
+
+                <div class="benefit">
+                    <strong>你的好處 | Your Benefit</strong><br>
+                    有系統地探索不同採購選項。
+                </div>
+            </article>
+
+            <!-- Step 3 -->
+            <article class="process-card">
+                <div class="process-number">03</div>
+                <h3>
+                    收集及比較報價
+                    <span class="english-title">Request and Compare Quotations</span>
+                </h3>
+
+                <p>在可行情況下，向潛在供應商索取報價及相關產品資料。</p>
+
+                <ul>
+                    <li>單價及最低訂購量（MOQ）</li>
+                    <li>產品規格及樣品安排</li>
+                    <li>預計生產時間</li>
+                    <li>付款及交貨條款</li>
+                    <li>運費及其他相關成本</li>
+                </ul>
+
+                <p>
+                    We organise available quotations and compare important
+                    pricing, product and delivery details.
+                </p>
+
+                <div class="benefit">
+                    <strong>你的好處 | Your Benefit</strong><br>
+                    更容易了解不同方案的成本與條件。
+                </div>
+            </article>
+
+            <!-- Step 4 -->
+            <article class="process-card">
+                <div class="process-number">04</div>
+                <h3>
+                    提交採購方案
+                    <span class="english-title">Present Sourcing Options</span>
+                </h3>
+
+                <p>我們會整理已取得的資料，方便你評估不同供應商。</p>
+
+                <ul>
+                    <li>供應商及產品選項摘要</li>
+                    <li>報價與訂購條件比較</li>
+                    <li>已知成本及待確認項目</li>
+                    <li>後續需要向供應商查詢的問題</li>
+                </ul>
+
+                <p>
+                    We present an organised summary of available options
+                    to support your decision-making.
+                </p>
+
+                <div class="benefit">
+                    <strong>你的好處 | Your Benefit</strong><br>
+                    根據清晰的資料，自行評估及選擇供應商。
+                </div>
+            </article>
+
+            <!-- Step 5 -->
+            <article class="process-card">
+                <div class="process-number">05</div>
+                <h3>
+                    協調採購後續事項
+                    <span class="english-title">Coordinate the Next Steps</span>
+                </h3>
+
+                <p>當你選定潛在供應商後，可按雙方確認的服務範圍協調下一步。</p>
+
+                <ul>
+                    <li>跟進供應商溝通</li>
+                    <li>查詢樣品及訂單細節</li>
+                    <li>確認價格及交易條件</li>
+                    <li>按需要聯絡貨代或物流公司</li>
+                </ul>
+
+                <p>
+                    We can help coordinate supplier communication, order details
+                    and logistics enquiries where agreed.
+                </p>
+
+                <div class="benefit">
+                    <strong>你的好處 | Your Benefit</strong><br>
+                    讓採購溝通及相關事項更有條理。
+                </div>
+            </article>
+
+            <!-- Step 6 -->
+            <article class="process-card">
+                <div class="process-number">06</div>
+                <h3>
+                    跟進進度及後續需要
+                    <span class="english-title">Follow Up and Review</span>
+                </h3>
+
+                <p>按照項目安排，跟進未完成事項及整理後續採購需要。</p>
+
+                <ul>
+                    <li>跟進供應商回覆</li>
+                    <li>更新待處理事項</li>
+                    <li>確認仍需補充的資料</li>
+                    <li>討論日後的採購需求</li>
+                </ul>
+
+                <p>
+                    We provide progress updates within the agreed service scope
+                    and can discuss future sourcing needs.
+                </p>
+
+                <div class="benefit">
+                    <strong>你的好處 | Your Benefit</strong><br>
+                    更清楚掌握項目進度及下一步安排。
+                </div>
+            </article>
+
+        </div>
+
+        <div class="process-note">
+            <h3>我們的服務原則 | Our Approach</h3>
+
+            <p>
+                <strong>清晰溝通、務實比較、靈活合作。</strong>
+                我們會按項目實際情況說明可提供的服務、費用及待確認事項。
+            </p>
+
+            <p>
+                <strong>Clear communication, practical comparison and flexible cooperation.</strong>
+                We clarify the proposed service scope, fees and outstanding questions
+                before work begins.
+            </p>
+        </div>
+
+        <div class="card" style="margin-top:1.5rem;">
+            <h3>服務範圍與收費 | Service Scope and Fees</h3>
+
+            <p>
+                不同採購項目的工作量和要求可能有所不同。
+                開始前，我們會與客戶確認工作範圍、預期成果、時間安排及相關費用。
+            </p>
+
+            <ul>
+                <li><strong>項目式服務費：</strong>按已確認的採購任務報價。</li>
+                <li><strong>佣金安排：</strong>如適用，事先以書面確認。</li>
+                <li><strong>持續採購支援：</strong>按實際需要另行商議。</li>
+            </ul>
+
+            <p>
+                Each project is different. Our service scope, deliverables,
+                timeline and fees will be discussed and agreed before work begins.
+                Project-based fees, commission arrangements or ongoing support
+                may be available where appropriate.
+            </p>
+        </div>
+
+        <div class="note-box">
+            <h3>重要服務說明 | Important Information</h3>
+
+            <p>
+                我們提供的服務以採購研究、潛在供應商資料整理、報價比較及雙方同意的協調工作為主。
+                供應商資料、產品規格、報價、認證及交付時間，均須由相關供應商或服務提供者確認。
+            </p>
+
+            <p>
+                除非另有書面協議，我們不保證供應商表現、產品質量、法規合規或交付結果。
+                客戶須自行評估並作出最終採購決定。產品檢驗、測試、認證、清關及運輸等服務，
+                須視乎項目需要另行確認。
+            </p>
+
+            <p>
+                Our services mainly cover sourcing research, potential supplier
+                information, quotation comparison and agreed coordination work.
+                Supplier information, specifications, quotations, certifications
+                and delivery estimates must be confirmed by the relevant providers.
+            </p>
+
+            <p>
+                Unless agreed in writing, we do not guarantee supplier performance,
+                product quality, regulatory compliance or delivery outcomes.
+                Customers remain responsible for their final purchasing decisions
+                and any required due diligence.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Fee Information -->
+    <section id="fees">
+        <h2>服務收費 | Service Fees</h2>
+
+        <p>
+            我們會按產品種類、採購數量、供應商搜尋難度及所需協調工作量評估項目。
+            所有服務費用會在開始工作前與客戶確認。
+        </p>
+
+        <p>
+            Our fees depend on the product, order quantity, sourcing requirements
+            and coordination work involved. The applicable fees will be agreed
+            with the customer before work begins.
+        </p>
+
+        <div class="card">
+            <h3>項目式採購服務費 | Project-Based Sourcing Fee</h3>
+            <p>
+                適合有明確產品或採購要求的客戶。具體費用按項目範圍另行報價。
+            </p>
+            <p>
+                Suitable for customers with specific product or sourcing needs.
+                Fees are quoted according to the agreed project scope.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>持續採購支援 | Ongoing Sourcing Support</h3>
+            <p>
+                適合有持續採購需求的客戶，服務內容及收費按實際需要商議。
+            </p>
+            <p>
+                Suitable for customers with recurring sourcing needs.
+                The service arrangement and fees are discussed individually.
+            </p>
+        </div>
+
+        <p class="small-print">
+            運費、樣品費、檢驗費、認證費、稅項及其他第三方費用，
+            如有需要，會按適用情況另行列明。實際責任及付款安排以雙方協議為準。
+        </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="contact-box">
+            <h2>開始你的採購項目 | Start Your Sourcing Project</h2>
+
+            <p>
+                正在尋找產品或比較供應商？
+                歡迎向我們提供基本採購要求，以便討論可行的合作方式。
+            </p>
+
+            <p>
+                Looking for a product or potential supplier?
+                Share your requirements with us to discuss your sourcing project.
+            </p>
+
+            <div class="contact-list">
+                <p><strong>請盡量提供以下資料 | Helpful Information</strong></p>
+                <ul>
+                    <li>產品名稱、描述或參考圖片</li>
+                    <li>規格及預計採購數量</li>
+                    <li>目標預算（如有）</li>
+                    <li>送貨目的地</li>
+                    <li>預期時間及其他要求</li>
                 </ul>
             </div>
-            <div class="card">
-                <h3>3. 物流協調加成 <span style="color:#555; font-weight:normal;">Logistics Mark-up</span></h3>
-                <p>負責安排貨代同物流：標準加成，喺原始貨運報價之上加收 <strong>10%–15%</strong></p>
-            </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>交易類型</th>
-                        <th>常見訂單規模</th>
-                        <th>常見服務費</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>小額採購代購</td>
-                        <td>USD 2,000 以下</td>
-                        <td>8% – 10%（或 USD50–150 固定費）</td>
-                    </tr>
-                    <tr>
-                        <td>中額採購代辦</td>
-                        <td>USD 2,000 – 10,000</td>
-                        <td>5% – 7%</td>
-                    </tr>
-                    <tr>
-                        <td>大額訂單採購</td>
-                        <td>USD 10,000 以上</td>
-                        <td>3% – 5%</td>
-                    </tr>
-                    <tr>
-                        <td>物流協調加成</td>
-                        <td>按實際報價</td>
-                        <td>貨運報價基礎上加收10%–15%</td>
-                    </tr>
-                </tbody>
-            </table>
+            <p>
+                聯絡方式將於確認後更新。<br>
+                Contact details will be added once confirmed.
+            </p>
+        </div>
+    </section>
 
-            <div class="note-box">
-                <h3>服務說明 Service Statement</h3>
-                <p><strong>中文</strong><br>我們提供中國、越南等海外供應商直接採購及一站式物流管理服務。收費結構清晰透明：按訂單總額收取 5% 至 8% 採購及協調服務費，另加實際運費。</p>
-                <p><strong>English</strong><br>We provide direct sourcing and one-stop logistics management from suppliers in China, Vietnam and other regions. Our fee structure is transparent: a 5%–8% sourcing & coordination service fee based on total order value, plus actual shipping cost.</p>
-            </div>
-        </section>
-        <!-- 收費區完結 -->
+</main>
 
-        <section>
-            <h2>聯絡我們 | Contact</h2>
-            <p>如你想查詢 3 件起訂試單、合規協助或物流報價，歡迎聯絡。聯絡資訊後續更新。</p>
-            <p><br>If you want to inquire about trial orders (min. 3 pcs), compliance support, or shipping details, please contact us. Contact details to be updated later.</p>
-        </section>
-    </div>
-    <footer>
-        <p>© 2026 星海國際貿易有限公司 Ocean Star international Trading Ltd.</p>
-    </footer>
+<footer>
+    <p>© 2026 星海國際貿易有限公司</p>
+    <p>Ocean Star International Trading Ltd.</p>
+    <p class="small-print" style="color:#e0e8f0;">
+        Sourcing Research · Supplier Matching · Trade Coordination
+    </p>
+</footer>
+
 </body>
 </html>
